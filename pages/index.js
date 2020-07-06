@@ -1,7 +1,7 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed-scripts.onrender.com"
-    : "https://d19092153533.ngrok.io";
+    : "https://db49aa9722b5.ngrok.io";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <button
         className="zmurl-checkout-modal-button"
         type="button"
-        data-event-api-id={"evt-paid-event"}
+        data-event-api-id={"evt-pOLvK9iHHf3sgHZ"}
       >
         Buy Tickets
       </button>
