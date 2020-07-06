@@ -1,3 +1,8 @@
+const EMBED_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://embed-scripts.onrender.com"
+    : "https://d19092153533.ngrok.io";
+
 export default function Home() {
   return (
     <div className="container">
@@ -12,10 +17,10 @@ export default function Home() {
         Buy Tickets
       </button>
 
-      <script src="https://embed-scripts.onrender.com/checkout-button.js" />
+      <script src={`${EMBED_BASE_URL}/checkout-button.js`} />
 
       <div className={"modal-container"} style={{ display: "none" }}>
-        <div className="modal-body">
+        <div className="modalhttps://e3a0a934d6fb.ngrok.io">
           <p>hi</p>
           <p>hi</p>
         </div>
