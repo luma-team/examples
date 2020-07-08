@@ -19,6 +19,36 @@ export default function Home() {
 
       <script src={`${EMBED_BASE_URL}/checkout-button.js`} />
 
+      {/*<script src="https://gumroad.com/js/gumroad-embed.js" />*/}
+      <div className="gumroad-product-embed" data-gumroad-product-id="IDiZb">
+        <a href="https://gumroad.com/l/IDiZb">Loading...</a>
+      </div>
+
+      <button id="eventbrite-widget-modal-trigger-112325334098" type="button">
+        EVENTBERITE Buy Tickets
+      </button>
+
+      <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js" />
+
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            var exampleCallback = function() {
+              console.log('Order complete!');
+            };
+
+            window.EBWidgets.createWidget({
+              widgetType: 'checkout',
+              eventId: '112325334098',
+              modal: true,
+              modalTriggerElementId: 'eventbrite-widget-modal-trigger-112325334098',
+              onOrderComplete: exampleCallback
+            });
+          `,
+        }}
+      />
+
       <style jsx global>{`
         html,
         body {
