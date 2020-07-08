@@ -19,7 +19,7 @@ export default function Home() {
 
       <script src={`${EMBED_BASE_URL}/checkout-button.js`} />
 
-      {/*<script src="https://gumroad.com/js/gumroad-embed.js" />*/}
+      <script src="https://gumroad.com/js/gumroad-embed.js" />
       <div className="gumroad-product-embed" data-gumroad-product-id="IDiZb">
         <a href="https://gumroad.com/l/IDiZb">Loading...</a>
       </div>
