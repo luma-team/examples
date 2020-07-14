@@ -1,7 +1,7 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed-scripts.onrender.com"
-    : "http://a34e4558390f.ngrok.io";
+    : "https://f62e728b0b33.ngrok.io";
 
 export default function Home() {
   return (
@@ -12,12 +12,16 @@ export default function Home() {
       <button
         className="zmurl-checkout-modal-button"
         type="button"
-        data-event-api-id="evt-paid-event"
+        data-zmurl-action="checkout"
+        data-zmurl-event-id="evt-paid-event"
       >
         Buy Tickets
       </button>
 
-      <script src={`${EMBED_BASE_URL}/checkout-button.js`} />
+      <script
+        id="zmurl-checkout"
+        src={`${EMBED_BASE_URL}/checkout-button.js`}
+      />
 
       {/*<script src="https://gumroad.com/js/gumroad-embed.js" />*/}
       {/*<div className="gumroad-product-embed" data-gumroad-product-id="IDiZb">*/}
