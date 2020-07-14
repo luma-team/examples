@@ -8,12 +8,11 @@ export default function Home() {
     <div className="container">
       <div>Hiiii</div>
 
-      {/* TODO: think about how we want to handle pages that don't handle scripts well */}
       <button
         className="zmurl-checkout-modal-button"
         type="button"
         data-zmurl-action="checkout"
-        data-zmurl-event-id="evt-paid-event"
+        data-zmurl-event-id="evt-QDi9j97FsQl9O2h"
       >
         Buy Tickets
       </button>
