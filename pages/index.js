@@ -1,7 +1,7 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed-scripts.onrender.com"
-    : "https://f62e728b0b33.ngrok.io";
+    : "https://db49aa9722b5.ngrok.io";
 
 export default function Home() {
   return (
