@@ -12,12 +12,16 @@ export default function Home() {
       <button
         className="zmurl-checkout-modal-button"
         type="button"
-        data-event-api-id={"evt-pOLvK9iHHf3sgHZ"}
+        data-zmurl-action="checkout"
+        data-zmurl-event-id="evt-paid-event"
       >
         Buy Tickets
       </button>
 
-      <script src={`${EMBED_BASE_URL}/checkout-button.js`} />
+      <script
+        id="zmurl-checkout"
+        src={`${EMBED_BASE_URL}/checkout-button.js`}
+      />
 
       {/*<script src="https://gumroad.com/js/gumroad-embed.js" />*/}
       {/*<div className="gumroad-product-embed" data-gumroad-product-id="IDiZb">*/}
@@ -52,7 +56,7 @@ export default function Home() {
       <style jsx global>{`
         html,
         body {
-          background-color: blue;
+          background-color: #f5f8fa;
           padding: 0;
           margin: 0;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
