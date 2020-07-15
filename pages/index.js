@@ -1,15 +1,18 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed-scripts.onrender.com"
-    : "https://db49aa9722b5.ngrok.io";
+    : "https://f62e728b0b33.ngrok.io";
 
 export default function Home() {
   return (
     <div className="container">
-      <div>Hiiii</div>
+      <h1>ZmURL Examples</h1>
 
+      <hr />
+      <h2>Checkout Button</h2>
+      <p>Click on the button below to launch ZmURL checkout widget:</p>
       <button
-        className="zmurl-checkout-modal-button"
+        className="zmurl-checkout--button"
         type="button"
         data-zmurl-action="checkout"
         data-zmurl-event-id="evt-QDi9j97FsQl9O2h"
@@ -22,36 +25,6 @@ export default function Home() {
         src={`${EMBED_BASE_URL}/checkout-button.js`}
       />
 
-      {/*<script src="https://gumroad.com/js/gumroad-embed.js" />*/}
-      {/*<div className="gumroad-product-embed" data-gumroad-product-id="IDiZb">*/}
-      {/*  <a href="https://gumroad.com/l/IDiZb">Loading...</a>*/}
-      {/*</div>*/}
-
-      <button id="eventbrite-widget-modal-trigger-112325334098" type="button">
-        EVENTBERITE Buy Tickets
-      </button>
-
-      <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js" />
-
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-            var exampleCallback = function() {
-              console.log('Order complete!');
-            };
-
-            window.EBWidgets.createWidget({
-              widgetType: 'checkout',
-              eventId: '112325334098',
-              modal: true,
-              modalTriggerElementId: 'eventbrite-widget-modal-trigger-112325334098',
-              onOrderComplete: exampleCallback
-            });
-          `,
-        }}
-      />
-
       <style jsx global>{`
         html,
         body {
@@ -61,10 +34,22 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+          color: #123;
         }
 
         * {
           box-sizing: border-box;
+        }
+
+        .container {
+          max-width: 1000px;
+          padding: 1rem;
+          margin: auto;
+        }
+
+        hr {
+          border-color: #bfcbda44;
+          margin: 2rem 0;
         }
       `}</style>
     </div>
