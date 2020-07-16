@@ -1,30 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ZmURL Examples
 
-## Getting Started
+In this repo, you can find code examples of how to add ZmURL to your website. If anything is not working as expected, file an issue or contact us at support@zmurl.com.
 
-First, run the development server:
+## Checkout Button
 
-```bash
-npm run dev
-# or
-yarn dev
+You can add a checkout button to your website, which will open a ZmURL checkout widget for people to register or pay for your event. Simply paste in the following code snippet with your event ID:
+
+```html
+<button
+  class="zmurl-checkout--button"
+  type="button"
+  data-zmurl-action="checkout"
+  data-zmurl-event-id="evt-YOUR-EVENT-ID"
+>
+  Register for Event
+</button>
+
+<script id="zmurl-checkout" src="https://embed.zmurl.com/checkout-button.js" />
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To get the code snippet with your event ID prefilled, go to the More tab on your Manage Event page, and follow the instructions in the Embed section.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Advanced Usage
 
-## Learn More
+If you are adding multiple checkout buttons onto your page, you only need to include the `<script>` line above once.
 
-To learn more about Next.js, take a look at the following resources:
+If you want to use your own styling for the button, simply remove `class="zmurl-checkout--button` to get rid of our default styles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you want to trigger the checkout widget with another element on the page, simply add `data-zmurl-action="action"` and `data-zmurl-event-id="evt-YOUR-EVENT-ID"` to it. Don't forget to add the `<script>` to the page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Button Not Working?
 
-## Deploy on Vercel
+Make sure you've included the `<script>` tag and it's loading properly. If your elements are dynamically rendered, the script may not recognize the button, and you will need to manually set up the button. To do so, execute the following JavaScript code after the button is rendered:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```js
+window.zmurl && window.zmurl.initCheckout();
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+It is safe to call this function multiple times.

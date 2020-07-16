@@ -17,7 +17,7 @@ export default function Home() {
         data-zmurl-action="checkout"
         data-zmurl-event-id="evt-QDi9j97FsQl9O2h"
       >
-        Buy Tickets
+        Register for Event
       </button>
 
       <script
