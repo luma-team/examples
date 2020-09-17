@@ -8,8 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.4.4",
-    "prettier": "^2.0.5",
+    "next": "9.5.3",
+    "prettier": "^2.1.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
