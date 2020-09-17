@@ -1,27 +1,27 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://embed-scripts.onrender.com"
+    ? "https://embed.lu.ma"
     : "https://f62e728b0b33.ngrok.io";
 
 export default function Home() {
   return (
     <div className="container">
-      <h1>ZmURL Examples</h1>
+      <h1>Luma Examples</h1>
 
       <hr />
       <h2>Checkout Button</h2>
-      <p>Click on the button below to launch ZmURL checkout widget:</p>
+      <p>Click on the button below to launch Luma checkout widget:</p>
       <button
-        className="zmurl-checkout--button"
+        className="luma-checkout--button"
         type="button"
-        data-zmurl-action="checkout"
-        data-zmurl-event-id="evt-QDi9j97FsQl9O2h"
+        data-luma-action="checkout"
+        data-luma-event-id="evt-QDi9j97FsQl9O2h"
       >
         Register for Event
       </button>
 
       <script
-        id="zmurl-checkout"
+        id="luma-checkout"
         src={`${EMBED_BASE_URL}/checkout-button.js`}
       />
 
