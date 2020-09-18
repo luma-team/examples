@@ -25,7 +25,7 @@ export default function Home() {
           className="luma-checkout--button"
           type="button"
           data-luma-action="checkout"
-          data-luma-event-id="evt-QDi9j97FsQl9O2h"
+          data-luma-event-id="evt-EneEKDWiCZ7IADf"
         >
           Register for Paid Event
         </button>
