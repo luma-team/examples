@@ -20,14 +20,14 @@ export default function Home() {
         Register for Event
       </button>
 
-      <div>
+      <div style={{marginTop: 10}}>
         <button
           className="luma-checkout--button"
           type="button"
           data-luma-action="checkout"
           data-luma-event-id="evt-QDi9j97FsQl9O2h"
         >
-          Register for Event
+          Register for Paid Event
         </button>
       </div>
 
