@@ -20,6 +20,18 @@ export default function Home() {
         Register for Event
       </button>
 
+      <div>
+        <button
+          className="luma-checkout--button"
+          type="button"
+          data-luma-action="checkout"
+          data-luma-event-id="evt-QDi9j97FsQl9O2h"
+        >
+          Register for Event
+        </button>
+      </div>
+
+
       <script
         id="luma-checkout"
         src={`${EMBED_BASE_URL}/checkout-button.js`}
