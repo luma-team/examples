@@ -3,6 +3,9 @@ const EMBED_BASE_URL =
     ? "https://embed.lu.ma"
     : "https://f62e728b0b33.ngrok.io";
 
+const eventId = "evt-QDi9j97FsQl9O2h"
+const paidEventId = "evt-EneEKDWiCZ7IADf"
+
 export default function Home() {
   return (
     <div className="container">
@@ -11,24 +14,26 @@ export default function Home() {
       <hr />
       <h2>Checkout Button</h2>
       <p>Click on the button below to launch Luma checkout widget:</p>
-      <button
+      <a
+        href={`https://lu.ma/event/${eventId}`}
         className="luma-checkout--button"
         type="button"
         data-luma-action="checkout"
-        data-luma-event-id="evt-QDi9j97FsQl9O2h"
+        data-luma-event-id={eventId}
       >
         Register for Event
-      </button>
+      </a>
 
       <div style={{marginTop: 10}}>
-        <button
+        <a
+          href={`https://lu.ma/event/${paidEventId}`}
           className="luma-checkout--button"
           type="button"
           data-luma-action="checkout"
-          data-luma-event-id="evt-EneEKDWiCZ7IADf"
+          data-luma-event-id={paidEventId}
         >
           Register for Paid Event
-        </button>
+        </a>
       </div>
 
 
