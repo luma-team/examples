@@ -1,7 +1,7 @@
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed.lu.ma"
-    : "https://f62e728b0b33.ngrok.io";
+    : "https://embed.lu.ma";
 
 const eventId = "evt-QDi9j97FsQl9O2h"
 const paidEventId = "evt-EneEKDWiCZ7IADf"
@@ -24,7 +24,7 @@ export default function Home() {
         Register for Event
       </a>
 
-      <div style={{marginTop: 10}}>
+      <div style={{marginTop: 40}}>
         <a
           href={`https://lu.ma/event/${paidEventId}`}
           className="luma-checkout--button"
