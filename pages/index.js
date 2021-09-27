@@ -1,10 +1,11 @@
+const isProd = process.env.NODE_ENV === "production"
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed.lu.ma"
-    : "https://embed.lu.ma";
+    : "https://d624d1e60c1f.ngrok.io";
 
-const eventId = "evt-QDi9j97FsQl9O2h"
-const paidEventId = "evt-EneEKDWiCZ7IADf"
+const eventId = isProd ? "evt-QDi9j97FsQl9O2h" : 'evt-free-event'
+const paidEventId = isProd ? "evt-EneEKDWiCZ7IADf" : 'evt-paid-event'
 
 export default function Home() {
   return (
