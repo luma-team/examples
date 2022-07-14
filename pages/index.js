@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === "production"
 const EMBED_BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://embed.lu.ma"
-    : "https://d624d1e60c1f.ngrok.io";
+    : "http://127.0.0.1:333";
 
 const eventId = isProd ? "evt-QDi9j97FsQl9O2h" : 'evt-free-event'
 const paidEventId = isProd ? "evt-EneEKDWiCZ7IADf" : 'evt-paid-event'
