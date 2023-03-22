@@ -1,7 +1,7 @@
 const isProd = process.env.NODE_ENV === "production"
-const EMBED_BASE_URL =
+const BASE_URL =
     process.env.NODE_ENV === "production"
-        ? "https://embed.lu.ma"
+        ? "https://lu.ma"
         : "http://127.0.0.1:5499";
 
 const eventId = isProd ? "evt-QDi9j97FsQl9O2h" : 'evt-free-event'
@@ -16,7 +16,7 @@ export default function Home() {
             <h2>Event Embed</h2>
 
             <iframe
-                src={`${EMBED_BASE_URL}/embed-checkout/${eventId}`}
+                src={`${BASE_URL}/embed-checkout/${eventId}`}
                 width="600"
                 height="450"
                 frameBorder="0"
@@ -29,7 +29,7 @@ export default function Home() {
             <h2>Page Not Allowed</h2>
 
             <iframe
-                src={`${EMBED_BASE_URL}/signin`}
+                src={`${BASE_URL}/signin`}
                 width="600"
                 height="450"
                 frameBorder="0"
